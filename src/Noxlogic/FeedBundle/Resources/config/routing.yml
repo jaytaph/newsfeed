@@ -1,0 +1,7 @@
+noxlogic_feed_feeds:
+    path:     /feeds
+    defaults: { _controller: NoxlogicFeedBundle:Feed:list }
+
+noxlogic_feed_tokenize:
+    path:     /feed/{url}/tokenize
+    defaults: { _controller: NoxlogicFeedBundle:Feed:tokenize }

@@ -1,0 +1,17 @@
+<h1>News feed</h1>
+
+{% for title,feed in feeds %}
+    <h1>{{ title }}</h1>
+    <h2>{{ feed.title }}</h2>
+
+    <table border="1">
+    {% for item in feed.items %}
+        <tr>
+            <td>{{ item.title }}</td>
+            <td><a href="{{ url('noxlogic_feed_tokenize', { 'url' : item.link|url_encode }) }}">{{ item.link }}</a></td>
+        </tr>
+    {% endfor %}
+    </table>
+    <br>
+
+{% endfor %}

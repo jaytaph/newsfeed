@@ -1,0 +1,4 @@
+noxlogic_feed:
+    resource: "@NoxlogicFeedBundle/Resources/config/routing.yml"
+    prefix:   /
+
